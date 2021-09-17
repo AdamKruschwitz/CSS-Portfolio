@@ -6,21 +6,28 @@ Color Pallette
 #222831 - darker grey, skewed blue
 
 */
+:root {
+     --light:#EEE;
+     --dark: #393E46;
+     --darker: #222831;
+     --highlight: #00ADB5;
+}
 
 * {
     box-sizing: border-box;
     font-size: 16px;
-    color: #EEEEEE;
+    color: var(--light);
 }
 
 p, h2, h3 {
-    color: #222831;
+    color: var(--darker);
 }
 
 header {
     display: flex;
-    justify-content: space-between;
-    background-color: #222831;
+    justify-content: flex-start;
+    background-color: var(--darker);
+    font-family: monospace;
     /* position:fixed;
     top: 0%; */
 }
@@ -31,22 +38,43 @@ h1 {
     line-height: 150%;
 }
 
+#name {
+    color: var(--highlight);
+    /* background-color: var(--dark);  */ /* make the text look like it's selected? */
+}
+
+/* Hide the nav button unless in mobile mode */
+#nav-button {
+    display: none;
+    font-size: 24px;
+    line-height: 100%;
+    font-family: u2400;
+    border: 2px solid var(--light);
+    border-radius: 50%;
+    padding:3px;
+    margin-right:10px;
+
+}
+
 nav {
-    display:flex;
-    flex: 0 1 500px;
+    display: flex;
+    flex: 0 1 10%;
     justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
 }
 
 nav a {
     text-decoration: none;
     font-size: 28px;
-    line-height:48px;
-    min-width: 200px;
+    line-height: 48px;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: center;
 }
 
-nav li:hover {
-    background-color: #393E46;
+nav a:hover {
+    background-color: var(--dark);
 }
 
 nav ul {
@@ -54,4 +82,26 @@ nav ul {
     flex: 1;
     justify-content: flex-end;
     align-items: stretch;
+}
+
+/* Responsive CSS for mobile devices */
+@media screen and (max-width: 768px) {
+    /* TODO: Create a navigation button that will bring up navigation links when clicked */
+    #nav-button {
+        display: inline-block;
+    }
+
+    .links {
+        display: none;
+    }
+
+    nav:hover > .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav:hover > #nav-button {
+        display: none;
+    }
+
 }
