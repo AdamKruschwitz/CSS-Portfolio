@@ -1,3 +1,57 @@
+/* 
+Color Pallette
+#EEEEEE - off white
+#00ADB5 - teal
+#393E46 - lighter grey
+#222831 - darker grey, skewed blue
+
+*/
+
 * {
     box-sizing: border-box;
+    font-size: 16px;
+    color: #EEEEEE;
+}
+
+p, h2, h3 {
+    color: #222831;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #222831;
+    /* position:fixed;
+    top: 0%; */
+}
+
+h1 {
+    font-size: 32px;
+    margin-left: 10px;
+    line-height: 150%;
+}
+
+nav {
+    display:flex;
+    flex: 0 1 500px;
+    justify-content: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 28px;
+    line-height:48px;
+    min-width: 200px;
+    text-align: center;
+}
+
+nav li:hover {
+    background-color: #393E46;
+}
+
+nav ul {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: stretch;
 }
