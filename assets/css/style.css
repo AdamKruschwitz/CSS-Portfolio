@@ -7,7 +7,8 @@ Color Pallette
 
 */
 :root {
-     --light:#EEE;
+     --lighter:#EEE;
+     --light: #e3e9e9;
      --dark: #393E46;
      --darker: #222831;
      --highlight: #00ADB5;
@@ -16,13 +17,14 @@ Color Pallette
 * {
     box-sizing: border-box;
     font-size: 16px;
-    color: var(--light);
+    color: var(--lighter);
 }
 
 p, h2, h3 {
     color: var(--darker);
 }
 
+/* Header formatting */
 header {
     display: flex;
     justify-content: flex-start;
@@ -49,7 +51,7 @@ h1 {
     font-size: 24px;
     line-height: 100%;
     font-family: u2400;
-    border: 2px solid var(--light);
+    border: 2px solid var(--lighter);
     border-radius: 50%;
     padding:3px;
     margin-right:10px;
@@ -84,9 +86,44 @@ nav ul {
     align-items: stretch;
 }
 
+/* About Me formating */
+#about-me {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--light);
+}
+
+#about-me-text {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    font-size: 20px;
+    line-height: 200%;
+
+    padding-left: 2%;
+    border-left: 8px solid var(--darker);
+}
+
+#about-me-text > h2 {
+    font-size: 48px;
+    line-height: 130%;
+}
+
+#about-me-text > p {
+    margin-top: 15px;
+}
+
+#about-me img {
+    max-height: 160px;
+    object-fit: cover;
+    margin: 1%;
+    border-radius: 50%;
+    display: inline;
+}
+
 /* Responsive CSS for mobile devices */
 @media screen and (max-width: 768px) {
-    /* TODO: Create a navigation button that will bring up navigation links when clicked */
+    /* navigation button that will bring up navigation links when clicked, then dissapear until it loses focus */
     #nav-button {
         display: inline-block;
     }
@@ -95,13 +132,36 @@ nav ul {
         display: none;
     }
 
-    nav:hover > .links {
+    nav:target > .links {
         display: flex;
         flex-direction: column;
     }
 
-    nav:hover > #nav-button {
+    nav:target > #nav-button {
         display: none;
     }
 
+    /* Mobile formatted about me */
+    #about-me {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #about-me > img {
+        margin: 4%;
+    }
+
+    #about-me-text {
+        text-align: left;
+        /* Erase previous border */
+        border: none;
+        padding: none;
+
+        border-top: 8px solid var(--darker); 
+        padding-top: 3%;
+    }
+
+    #about-me-text > h2 {
+        text-align: center;
+    }
 }
