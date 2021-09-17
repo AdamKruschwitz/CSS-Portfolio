@@ -132,12 +132,12 @@ nav ul {
         display: none;
     }
 
-    nav:target > .links {
+    nav:hover > .links {
         display: flex;
         flex-direction: column;
     }
 
-    nav:target > #nav-button {
+    nav:hover > #nav-button {
         display: none;
     }
 
