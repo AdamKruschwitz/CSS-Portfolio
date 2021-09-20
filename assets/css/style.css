@@ -189,9 +189,9 @@ h2 {
 
 /* Contact me styling */
 #contact-me {
-    margin-left: 11%;
+    margin: 10px 5% 10px 11%;
     padding-left: 5%;
-    width:84%;
+    width:79%;
     border-left: 8px solid var(--dark);
 }
 
@@ -209,6 +209,21 @@ h2 {
 #contact-me a {
     color: var(--darker);
     font-weight: normal;
+}
+
+/* Styling for footer */
+footer {
+    background-color: var(--darker);
+    display: block;
+    text-align: center;
+
+    padding: 20px
+}
+
+footer > p {
+    color: var(--lighter);
+    font-weight:lighter;
+    font-size: 20px;
 }
 
 /* Responsive CSS for mobile devices */
