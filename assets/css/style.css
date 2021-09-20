@@ -91,7 +91,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--light);
+    /* background-color: var(--light); */
 }
 
 #about-me-text {
@@ -114,16 +114,86 @@ nav ul {
 }
 
 #about-me img {
-    max-height: 160px;
+    max-width: 9%;
     object-fit: cover;
     margin: 1%;
     border-radius: 50%;
-    display: inline;
+    /* display: inline; */
+}
+
+
+/* Styling for projects page */
+#projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 82%;
+    padding-left: 2%;
+    margin: 10px 5% 10px 11%;
+    border-left: 8px solid var(--darker);
+    /* background-color: red; */
+}
+
+#projects > h2 {
+    font-size: 48px;
+    line-height: 100%;
+    text-align: left;
+    width: 100%;
+    margin-left: 1.5%;
+}
+
+.project {
+    flex: 0 0 30%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+
+    background-color: var(--light);
+    margin: 1.5%;
+
+    border: 4px solid var(--light);
+}
+
+.featured {
+    flex: 0 0 97%;
+    /* background-color: purple; */
+}
+
+.project > img {
+    max-width: 100%;
+    object-fit: cover;
+    overflow: clip;
+    margin-bottom: 5px;
+    align-self: center;
+}
+
+.project > h3 {
+    /* padding-left: 5%; */
+    font-size: 30px;
+    line-height: 100%;
+    font-weight: bold;
+}
+
+.project:hover {
+    background-color: var(--highlight);
+    border-color: var(--highlight);
+}
+
+.project:hover > h3 {
+    background-color: var(--highlight);
+}
+
+.project:hover > img {
+    opacity: 70%;
 }
 
 /* Responsive CSS for mobile devices */
 @media screen and (max-width: 768px) {
-    /* navigation button that will bring up navigation links when clicked, then dissapear until it loses focus */
+    /* Navigation button that will bring up navigation links when clicked, 
+    then dissapear until it loses focus */
     #nav-button {
         display: inline-block;
     }
