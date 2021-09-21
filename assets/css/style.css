@@ -91,16 +91,21 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* background-color: var(--light); */
+}
+
+#about-me img {
+    max-width: 28%;
+    object-fit: cover;
+    margin: 1%;
+    border-radius: 50%;
+    /* display: inline; */
 }
 
 #about-me-text {
-    grid-column-start: 1;
-    grid-column-end: 7;
     font-size: 20px;
     line-height: 200%;
 
-    padding-left: 2%;
+    padding-left: 5%;
     border-left: 8px solid var(--darker);
     margin-right: 7%;
     margin-top: 10px;
@@ -115,14 +120,6 @@ h2 {
     margin-top: 15px;
 }
 
-#about-me img {
-    max-width: 9%;
-    object-fit: cover;
-    margin: 1%;
-    border-radius: 50%;
-    /* display: inline; */
-}
-
 
 /* Styling for projects page */
 #projects {
@@ -130,16 +127,15 @@ h2 {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 82%;
-    padding-left: 2%;
-    margin: 10px 5% 10px 11%;
+    width: 65%;
+    padding-left: 5%;
+    margin: 10px 5% 10px 30%;
     border-left: 8px solid var(--darker);
     /* background-color: red; */
 }
 
 #projects > h2 {
     width: 100%;
-    margin-left: 1.5%;
 }
 
 .project {
@@ -151,7 +147,8 @@ h2 {
     align-items: left;
 
     background-color: var(--light);
-    margin: 0.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     border: 8px solid var(--light);
 }
@@ -168,6 +165,7 @@ h2 {
 
 .featured {
     flex: 0 0 99%;
+    max-height: 700px;
     /* background-color: purple; */
 }
 
@@ -197,10 +195,14 @@ h2 {
 
 /* Contact me styling */
 #contact-me {
-    margin: 10px 5% 10px 11%;
-    padding-left: 5%;
-    width:79%;
-    border-left: 8px solid var(--darker);
+    margin: 10px 1% 10px 1%;
+    width: 98%;
+    
+}
+
+#contact-me h2{
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 #contact-me ul {
@@ -259,10 +261,12 @@ footer > p {
     #about-me {
         flex-direction: column;
         justify-content: center;
+        margin: 2%;
     }
 
     #about-me > img {
         margin: 4%;
+        max-width: 90%;
     }
 
     #about-me-text {
@@ -273,9 +277,58 @@ footer > p {
 
         border-top: 8px solid var(--darker); 
         padding-top: 3%;
+        margin: 0px;
+        margin-top: 10px;
     }
 
     #about-me-text > h2 {
         text-align: center;
+    }
+
+    /* Mobile Projects Section Styling */
+
+    #projects {
+        border: none;
+        width:96%;
+        margin: 2%;
+        padding:0px;
+        padding-top: 10px;
+        border-top: 8px solid var(--darker);
+    }
+
+    #projects h2{
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+
+        margin-bottom: 10px;
+    }
+
+    .project {
+        flex: 0 0 99%;
+        margin: 0.5%;
+        padding: 0px;
+    }
+
+    /* Mobile Contact Me section styling */
+    #contact-me ul{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #contact-me {
+        margin: 0px;
+        padding: 0px;
+        border: none;
+
+        padding-top: 10px;
+        border-top: 8px solid var(--darker);
+        
+        margin: 2%;
+        width: 96%;
+    }
+
+    #contact-me li {
+        font-size: 20px;
     }
 }
